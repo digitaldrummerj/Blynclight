@@ -12,22 +12,26 @@ This library will soon be tested with the following platforms
 - Windows Universal App running on Xbox One
 - Node.js Windows Universal App
 
-To get started, do the following two things:
+To get started, do the following three things:
 
-1. Add a declaration to your Universal App authorizing the device HID access.  This declaration should be added to the ```Capabilities``` element in your application's manifest file.
+1. Use the NuGet interface to import the **Blynclight** package.  
 
-```xml
-<DeviceCapability Name="humaninterfacedevice">
-  <Device Id="vidpid:0E53 2516">
-    <Function Type="usage:FF00 0001"/>
-  </Device>
-</DeviceCapability>
-```
+  > You can alternatively use the Package Manager Console with the following command ```Install-Package Blynclight -Pre```.
 
-2. Add the following code anywhere in your application.
+2. Add a declaration to your Universal App authorizing the device HID access.  This declaration should be added to the ```Capabilities``` element in your application's manifest file.
+  
+  ```xml
+  <DeviceCapability Name="humaninterfacedevice">
+    <Device Id="vidpid:0E53 2516">
+      <Function Type="usage:FF00 0001"/>
+    </Device>
+  </DeviceCapability>
+  ```
+  
+3. Add the following code anywhere in your application.
 
-```C#
-var manager = new BlyncLight.Manager();
-await manager.Init();
-manager.BlyncLight.StatusColor = Colors.Blue;
-```
+  ```C#
+  var manager = new BlyncLight.Manager();
+  await manager.Init();
+  manager.BlyncLight.StatusColor = Colors.Blue;
+  ```
