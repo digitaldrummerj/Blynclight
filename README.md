@@ -1,8 +1,10 @@
 # Blynclight
 Windows Universal portable library for the latest Blynclight device.
 
+## Warning
 > This is a very early alpha and will definitely not be up to my normal quality standard or tested thoroughly.  This project will evolve over time as more people wish to use a Blynclight with their Windows Universal app.
 
+## Uses
 This library uses the Windows Runtime HID libraries to communicate with the BlyncLight device.  This library has been tested with the following platforms:
 - Windows Universal App running on Windows 10 preview
 - Windows Universal App running on Raspberry Pi 2 with Windows 10 IoT
@@ -12,6 +14,7 @@ This library will soon be tested with the following platforms
 - Windows Universal App running on Xbox One
 - Node.js Windows Universal App
 
+## Getting Started
 To get started, do the following three things:
 
 1. Use the NuGet interface to import the **Blynclight** package.  
@@ -35,3 +38,6 @@ To get started, do the following three things:
   await manager.Init();
   manager.BlyncLight.StatusColor = Colors.Blue;
   ```
+
+##NuGet Package
+[https://www.nuget.org/packages/Blynclight](https://www.nuget.org/packages/Blynclight)
